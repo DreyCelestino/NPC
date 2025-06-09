@@ -3,9 +3,15 @@ Console.Clear();
 bool procurando = true;
 bool atacando = false, fugindo = false, morto = false;
 bool ferido = false, inimigoproximo = false, eliminado = false;
+bool rodando = false, fechar = false;
 int roll, ciclo = 0;
 
 Random dado = new Random();
+
+rodando = true;
+while (fechar == false){
+
+while (rodando == true){
 
 while (morto == false)
 {
@@ -120,9 +126,39 @@ while (morto == false)
 
     }
 
+}
 
-
+Console.WriteLine($"O NPC sobreviveu por {ciclo} transições.");
+rodando = false;
 }
 
 
-Console.WriteLine($"O NPC sobreviveu por {ciclo} transições.");
+Console.WriteLine("Deseja ir novamente? (S/N)");
+string resposta = Console.ReadLine()!.Remove(1).ToUpper();
+
+while (!(resposta == "S") && !(resposta == "N"))
+{
+    Console.WriteLine("\nOpção inválida! Tente novamente.");
+    resposta = Console.ReadLine()!.Remove(1).ToUpper();
+}
+
+switch(resposta){
+    case "S":
+    resposta = "null";
+    morto = false;
+    procurando = true;
+    atacando = false;
+    fugindo = false;
+    ferido = false;
+    inimigoproximo = false;
+    eliminado = false;
+    ciclo = 0;
+    rodando = true;
+    break;
+
+    case "N":
+    resposta = "null";
+    fechar = true;
+    break;
+}
+}
