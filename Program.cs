@@ -11,7 +11,7 @@ while (morto == false)
 {
     while (procurando == true)
     {
-        roll = dado.Next(1, 2);
+        roll = dado.Next(1, 3);
 
         if (roll == 1)
         {
@@ -26,19 +26,21 @@ while (morto == false)
         {
             procurando = true;
             ciclo = ciclo + 1;
+            Console.WriteLine("Procurando > Procurando");
         }
         else if (eliminado == false && ferido == false && inimigoproximo == true)
         {
             atacando = true;
             procurando = false;
             ciclo = ciclo + 1;
+            Console.WriteLine("Procurando > Atacando");
         }
     }
 
 
     while (atacando == true)
     {
-        roll = dado.Next(1, 2);
+        roll = dado.Next(1, 3);
         if (roll == 1)
         {
             ferido = true;
@@ -58,18 +60,21 @@ while (morto == false)
         {
             atacando = true;
             ciclo = ciclo + 1;
+            Console.WriteLine("Atacando > Atacando");
         }
         else if (eliminado == false && inimigoproximo == false)
         {
             procurando = true;
             atacando = false;
             ciclo = ciclo + 1;
+            Console.WriteLine("Atacando > Procurando");
         }
         else if (eliminado == false && ferido == true)
         {
             fugindo = true;
             atacando = false;
             ciclo = ciclo + 1;
+            Console.WriteLine("Atacando > Fugindo");
         }
         else if (eliminado == true)
         {
@@ -80,7 +85,7 @@ while (morto == false)
 
     while (fugindo == true)
     {
-        roll = dado.Next(1, 4);
+        roll = dado.Next(1, 5);
         if (roll == 1)
         {
             eliminado = true;
@@ -98,12 +103,14 @@ while (morto == false)
         {
             fugindo = true;
             ciclo = ciclo + 1;
+            Console.WriteLine("Fugindo > Fugindo");
         }
         else if (eliminado == false && ferido == false)
         {
             procurando = true;
             fugindo = false;
             ciclo = ciclo + 1;
+            Console.WriteLine("Fugindo > Procurando");
         }
         else if (eliminado == true)
         {
@@ -113,6 +120,9 @@ while (morto == false)
 
     }
 
+
+
 }
+
 
 Console.WriteLine($"O NPC sobreviveu por {ciclo} transições.");
