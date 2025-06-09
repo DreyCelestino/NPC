@@ -3,16 +3,12 @@ Console.Clear();
 bool procurando = true;
 bool atacando = false, fugindo = false, morto = false;
 bool ferido = false, inimigoproximo = false, eliminado = false;
-bool rodando = false, fechar = false;
+bool rodando = true; 
 int roll, ciclo = 0;
 
 Random dado = new Random();
 
-rodando = true;
-while (fechar == false){
-
 while (rodando == true){
-
 while (morto == false)
 {
     while (procurando == true)
@@ -129,8 +125,6 @@ while (morto == false)
 }
 
 Console.WriteLine($"O NPC sobreviveu por {ciclo} transições.");
-rodando = false;
-}
 
 
 Console.WriteLine("Deseja ir novamente? (S/N)");
@@ -158,7 +152,7 @@ switch(resposta){
 
     case "N":
     resposta = "null";
-    fechar = true;
+    rodando = false;
     break;
 }
 }
