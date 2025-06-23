@@ -51,7 +51,7 @@ while (rodando == true){
             {
                 ferido = true; // 50% de chances de se ferir.
 
-                roll = dado.Next(1, 2);
+                roll = dado.Next(1, 3);
                 if (roll == 2)
                 {
                     eliminado = true; // 50% de chances de morrer com o ferimento.
