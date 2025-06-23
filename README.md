@@ -103,7 +103,7 @@ O NPC sobreviveu por 4 transições.
 
 - Abrir direto o executável do programa.
 
-- Fazer o download clicando [aqui](https://github.com/DreyCelestino/NPC/blob/main/dist.zip)
+- Fazer o download clicando [aqui](https://drive.google.com/file/d/10Weu09PLZcJyWuWjxCiMWh4vTb5OeT0n/view?usp=sharing) (google drive) ou [aqui](https://github.com/DreyCelestino/NPC/blob/main/dist.zip) (github)
 
 - Extraia a pasta.
 
