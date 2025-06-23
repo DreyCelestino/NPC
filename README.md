@@ -84,7 +84,7 @@ O NPC sobreviveu por 4 transições.
     - Ter o SDK do .NET 7+ instalado na sua máquina.
 
 2. Download do projeto:
-    - Baixe o projeto completo clicando aqui (substitua pelo link correto do seu repositório).
+    - Baixe o projeto completo clicando [aqui](https://github.com/DreyCelestino/NPC).
 
 3. Execução:
     - Extraia a pasta.
